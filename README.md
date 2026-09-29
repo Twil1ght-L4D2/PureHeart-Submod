@@ -78,7 +78,7 @@ Delete the `game/Submods/PureHeart-Submod` folder. MAS regenerates its sprite da
 
 ## Credits
 
-- Outfits that stay in the game come from community spritepacks by orcaramelo, briaryoung, mayjay, mocca_bun, delicake, finale and others. Thank you for keeping Monika's wardrobe wholesome.
+- Outfits that stay in the game come from community spritepacks Thank you for keeping Monika's wardrobe wholesome.
 - Monika After Story is made by the MAS team, and DDLC by Team SALVATO. This mod wouldn't exist without them.
 - Mod, lists and loader maintained by [Twilight](https://github.com/Twil1ght-L4D2).
 
