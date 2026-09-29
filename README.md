@@ -22,6 +22,12 @@ Once per launch the mod quietly checks that file in the background. When I ban a
 
 No internet? No problem. The mod keeps working from its last downloaded copy, and worst case it falls back to the lists built into it. It can never break or empty out.
 
+## Join my Discord
+
+Got a sprite you want reviewed, found a bug, or just want to hang out with players who love this game the way it was written? Come by:
+
+**[discord.gg/QcE3YRPWk4](https://discord.gg/QcE3YRPWk4)**
+
 ## Install
 
 1. Download the latest zip from the [Releases](../../releases) page.
@@ -54,13 +60,15 @@ Pure Heart adds its own topic category with four conversations, unlocked as your
 ## Questions people might have
 
 **Where did outfit X go?**
-Either it's on the block list or it was never on the allow list. The mod works as a whitelist: an outfit has to be approved to stay. That's the only way to be sure nothing slips through.**One of my wholesome outfits is missing.**
+Either it's on the block list or it was never on the allow list. The mod works as a whitelist: an outfit has to be approved to stay. That's the only way to be sure nothing slips through.
 
-That's expected. Pure Heart only allows outfits I've personally reviewed, so clothes from spritepacks I haven't checked yet stay hidden until they're approved. Share the sprite in my Discord server and I'll verify it. Once its id is on the keep list, every player gets it automatically through the online update.
+**One of my wholesome outfits is missing.**
+
+That's expected. Pure Heart only allows outfits I've personally reviewed, so clothes from spritepacks I haven't checked yet stay hidden until they're approved. Share the sprite in my [Discord server](https://discord.gg/QcE3YRPWk4) and I'll verify it. Once its id is on the keep list, every player gets it automatically through the online update.
 
 **I made a wholesome spritepack. Can it be allowed?**
 
-Yes, that's what the GitHub lists are for. Reach out and I'll review the pack. If the outfits are safe, the ids go on the keep list and every player gets them automatically.
+Yes, that's what the GitHub lists are for. Post it in my [Discord server](https://discord.gg/QcE3YRPWk4) and I'll review the pack. If the outfits are safe, the ids go on the keep list and every player gets them automatically.
 
 **Does it need the MAS Big Loader?**
 No. It's a plain submod. The loader is just a convenient way to install it.
