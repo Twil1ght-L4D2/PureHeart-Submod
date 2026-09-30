@@ -46,7 +46,6 @@ game/Submods/PureHeart-Submod/game/PureHeart_topics.rpy
 
 3. Start the game. Monika will thank you the first time.
 
-You can also install it in one click from the MAS Big Loader.
 
 ## Talk -> More -> Twilight
 
@@ -70,8 +69,6 @@ That's expected. Pure Heart only allows outfits I've personally reviewed, so clo
 
 Yes, that's what the GitHub lists are for. Post it in my [Discord server](https://discord.gg/QcE3YRPWk4) and I'll review the pack. If the outfits are safe, the ids go on the keep list and every player gets them automatically.
 
-**Does it need the MAS Big Loader?**
-No. It's a plain submod. The loader is just a convenient way to install it.
 
 **How do I uninstall?**
 Delete the `game/Submods/PureHeart-Submod` folder. MAS regenerates its sprite data on the next launch.
