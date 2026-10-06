@@ -4,6 +4,8 @@ Zero-tolerance NSFW filter for Monika After Story. Removes the revealing outfits
 
 ## New in this version
 
+- **A new set of topics.** Pure Heart adds its own **Twilight** section under Talk > More, with ten topics. Four go to the heart of why the filter exists, and six are everyday ones: rainy days, favorite little things, comfort after a bad day, the future together, taking care of yourself, and checking the outfit list.
+- **The list check works now.** "Check the list for updates" used to come back empty on some installs and quietly change nothing. That is fixed, so asking her really does pull the newest list, and the automatic check keeps your outfit lists current after that.
 - **Removed a leftover diagnostic file.** An earlier build wrote a raw byte dump named `ph_lists_rejected.hex` into the submod folder whenever a list check came back unreadable. It only ever existed to chase down an update bug that is fixed now, so it no longer ships. The small text note at `ph_lists_debug.txt` stays, so a check that fails can still be read from a single line.
 
 ## Earlier in 1.19
@@ -14,8 +16,7 @@ Zero-tolerance NSFW filter for Monika After Story. Removes the revealing outfits
 ## Earlier in 1.18
 
 - Fixed outfits dropping out for a session after an update, by keeping the built-in lists current and remembering the applied list in your save data.
-- Fixed the online outfit list sometimes not applying.
-- The automatic check now compares the list itself, not just its version number.
+- The automatic check compares the list itself, not just its version number.
 - Reworked the creator menu: His Discord server, The Statement, and Who is the creator.
 - Monika now talks about the little Monika bot that runs in the server.
 
