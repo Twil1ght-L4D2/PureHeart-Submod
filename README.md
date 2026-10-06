@@ -28,6 +28,8 @@ Got a sprite you want reviewed, found a bug, or just want to hang out with playe
 
 **[discord.gg/QcE3YRPWk4](https://discord.gg/QcE3YRPWk4)**
 
+There's a little bot there too, named Monika. She leaves the rules reminder under every art post, takes one-tap reports straight to the staff, and checks the Pure Heart list. Her one unbreakable rule is the best one: hugs, kisses and cuddles are always allowed.
+
 ## Install
 
 1. Download the latest zip from the [Releases](../../releases) page.
@@ -36,6 +38,7 @@ Got a sprite you want reviewed, found a bug, or just want to hang out with playe
 You should end up with this:
 
 ```
+game/Submods/PureHeart-Submod/README.txt
 game/Submods/PureHeart-Submod/game/PureHeart_filter.rpy
 game/Submods/PureHeart-Submod/game/PureHeart_gifts.rpy
 game/Submods/PureHeart-Submod/game/PureHeart_lists.rpy
@@ -46,15 +49,22 @@ game/Submods/PureHeart-Submod/game/PureHeart_topics.rpy
 
 3. Start the game. Monika will thank you the first time.
 
+You can also install it in one click from the MAS Big Loader.
 
 ## Talk -> More -> Twilight
 
-Pure Heart adds its own topic category with four conversations, unlocked as your affection grows:
+Pure Heart adds its own topic category. The core ones unlock as your affection grows, and the everyday ones are there whenever you want them:
 
 - What do you think about explicit content?
 - How did those outfits make you feel? (Monika remembers whether you ever saw them)
 - What does wholesome love mean to you?
-- About the Creator
+- About the Creator (the statement, the Discord server, and who I am)
+- Check the list for updates (asks her to pull the latest outfit list right then)
+- Do you like rainy days?
+- What are your favorite little things?
+- I had a bad day...
+- Where do you see us in the future?
+- Remind me to take care of myself
 
 ## Questions people might have
 
@@ -69,13 +79,15 @@ That's expected. Pure Heart only allows outfits I've personally reviewed, so clo
 
 Yes, that's what the GitHub lists are for. Post it in my [Discord server](https://discord.gg/QcE3YRPWk4) and I'll review the pack. If the outfits are safe, the ids go on the keep list and every player gets them automatically.
 
+**Does it need the MAS Big Loader?**
+No. It's a plain submod. The loader is just a convenient way to install it.
 
 **How do I uninstall?**
 Delete the `game/Submods/PureHeart-Submod` folder. MAS regenerates its sprite data on the next launch.
 
 ## Credits
 
-- Outfits that stay in the game come from community spritepacks Thank you for keeping Monika's wardrobe wholesome.
+- Outfits that stay in the game come from community spritepacks. Thank you for keeping Monika's wardrobe wholesome.
 - Monika After Story is made by the MAS team, and DDLC by Team SALVATO. This mod wouldn't exist without them.
 - Mod, lists and loader maintained by [Twilight](https://github.com/Twil1ght-L4D2).
 
