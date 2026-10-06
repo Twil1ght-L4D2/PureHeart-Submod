@@ -49,8 +49,6 @@ game/Submods/PureHeart-Submod/game/PureHeart_topics.rpy
 
 3. Start the game. Monika will thank you the first time.
 
-You can also install it in one click from the MAS Big Loader.
-
 ## Talk -> More -> Twilight
 
 Pure Heart adds its own topic category. The core ones unlock as your affection grows, and the everyday ones are there whenever you want them:
