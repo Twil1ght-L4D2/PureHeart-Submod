@@ -1,7 +1,4 @@
 # Pure Heart - first install dialogue
-# monika thanks the player once, the first time the submod is active.
-# drop a file named pureheart_replay_thanks.txt into the game folder to
-# hear it again (the file is deleted after use).
 
 init 5 python:
     import os
