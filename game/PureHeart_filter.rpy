@@ -1,56 +1,46 @@
-# Pure Heart - outfit filter
-# removes revealing outfits and risqué topics every time the game starts.
-# hugs / kisses / snuggling closer are not touched.
-# runs at init 15 so it filters vanilla AND spritepack outfits.
-# the lists can also be updated online from GitHub (PureHeart_lists.rpy),
-# with these built-in lists as the offline fallback.
+# Pure Heart
+# Outfit and topic filter. Runs at init 15, and re-applies on every launch.
 
 init 15 python:
-    # outfits that are allowed to stay
+    # >>> PH_BUILTIN_LISTS
     _ph_keep = [
         u'def', u'blazerless', u'blackdress', u'marisa', u'rin', u'santa',
-        u'nou_shirt',
-        u'clothes_otter_keqing_outfit', u'finale_and_otter_hoodie_purple',
-        u'briaryoung_button_up_flowered',
+        u'nou_shirt', u'clothes_otter_keqing_outfit',
+        u'finale_and_otter_hoodie_purple', u'briaryoung_button_up_flowered',
         u'briaryoung_shuchiin_academy_uniform',
         u'briaryoung_sleeveless_turtleneck_black',
         u'briaryoung_tshirt_jurassic_park',
-        u'briaryoung_tshirt_jurassic_world',
-        u'finale_jacket_brown', u'finale_putonahappyface_shirt',
-        u'finale_shirt_blue', u'finale_shirt_resthere',
-        u'finale_sweatervest_blue', u'finale_turtleneck_sweater_beige',
-        u'mayjay_pink_kimono', u'mocca_bun_blackandwhitestripedpullover',
+        u'briaryoung_tshirt_jurassic_world', u'finale_jacket_brown',
+        u'finale_putonahappyface_shirt', u'finale_shirt_blue',
+        u'finale_shirt_resthere', u'finale_sweatervest_blue',
+        u'finale_turtleneck_sweater_beige', u'mayjay_pink_kimono',
+        u'mocca_bun_blackandwhitestripedpullover',
         u'orcaramelo_sakuya_izayoi', u'orcaramelo_sweater_shoulderless',
-        # community spritepacks (reviewed)
         u'orcaramelo_sweater_shoulderless_edit_brown',
         u'orcaramelo_sweater_shoulderless_white_edit',
         u'mj_darkywgreen_dress_recolor', u'mj_lightywgreen_dress_recolor',
-        u'mj_regywgreen_dress_recolor',
-        u'delicake_blanket', u'pink_polkadot_pajama',
+        u'mj_regywgreen_dress_recolor', u'delicake_blanket',
+        u'pink_polkadot_pajama', u'birthday2026_blue_dress',
     ]
     _ph_block = [
         u'bath_towel_white', u'blackpink_dress', u'dress_newyears',
         u'santa_lingerie', u'spider_lingerie', u'sundress_white',
-        u'vday_lingerie',
-        u'briaryoung_bralette_red_ruffles',
+        u'vday_lingerie', u'briaryoung_bralette_red_ruffles',
         u'briaryoung_heart_cut_bikini_black',
         u'briaryoung_heart_cut_bikini_green',
         u'briaryoung_heart_cut_bikini_pink',
         u'briaryoung_heart_cut_bikini_purple',
         u'briaryoung_heart_cut_bikini_white',
         u'briaryoung_heart_cut_bikini_yellow',
-        u'briaryoung_vcut_crossed_straps_tanktop_white',
-        u'finale_tanktop', u'orcaramelo_bikini_shell',
-        u'clothes_otter_blacktanktop', u'clothes_otter_lisa_outfit',
-        u'clothes_otter_fishnets',
-        u'briaryoung_dress_dark_blue_sparkle',
-        u'finale_green_dress', u'finale_hoodie_green',
-        u'hatana_2b', u'multimokia_wine_asymmetrical_pullover',
-        u'orcaramelo_hatsune_miku',
+        u'briaryoung_vcut_crossed_straps_tanktop_white', u'finale_tanktop',
+        u'orcaramelo_bikini_shell', u'clothes_otter_blacktanktop',
+        u'clothes_otter_lisa_outfit', u'clothes_otter_fishnets',
+        u'briaryoung_dress_dark_blue_sparkle', u'finale_green_dress',
+        u'finale_hoodie_green', u'hatana_2b',
+        u'multimokia_wine_asymmetrical_pullover', u'orcaramelo_hatsune_miku',
         u'velius94_dress_whitenavyblue', u'velius94_shirt_pink',
         u'mj_rose_valentines_dress_red',
     ]
-    # what monika wears instead if she had a blocked outfit on
     _ph_replace = {
         u'dress_newyears': u'blackdress',
         u'blackpink_dress': u'blackdress',
@@ -85,43 +75,48 @@ init 15 python:
     _ph_greetings = [
         u'greeting_o31_lingerie', u'greeting_after_bath',
     ]
-    # anything with one of these in its name gets removed,
-    # even if it's from a spritepack we've never seen
     _ph_words = [
         u'lingerie', u'nude', u'nudes', u'naked', u'nsfw', u'lewd',
-        u'hentai', u'porn', u'r18', u'sexy', u'erotic',
-        u'bikini', u'bralette', u'swimsuit', u'underwear',
-        u'towel', u'topless', u'panties', u'bra_',
+        u'hentai', u'porn', u'r18', u'sexy', u'erotic', u'bikini',
+        u'bralette', u'swimsuit', u'underwear', u'towel', u'topless',
+        u'panties', u'bra_',
     ]
+    # <<< PH_BUILTIN_LISTS
 
-    # the lists actually used (built-in until the online updater swaps
-    # in newer ones from GitHub)
+    # list/dict/set are shadowed in some store namespaces, so stick to
+    # comprehensions and literals.
     _ph_active = {
-        u"keep": list(_ph_keep), u"block": list(_ph_block),
-        u"replace": dict(_ph_replace), u"events": list(_ph_events),
-        u"greetings": list(_ph_greetings), u"words": list(_ph_words),
+        u"keep": [_v for _v in _ph_keep],
+        u"block": [_v for _v in _ph_block],
+        u"replace": {_k: _v for _k, _v in _ph_replace.items()},
+        u"events": [_v for _v in _ph_events],
+        u"greetings": [_v for _v in _ph_greetings],
+        u"words": [_v for _v in _ph_words],
     }
     _ph_list_version = u"1"
 
     def PH_set_lists(_data, _version):
-        # swap in new lists (from GitHub) and lock any newly banned topics
         global _ph_active, _ph_list_version
-        _old_ev = set(_ph_active[u"events"])
-        _old_gr = set(_ph_active[u"greetings"])
+        _old_ev = {}
+        for _e in _ph_active[u"events"]:
+            _old_ev[_e] = True
+        _old_gr = {}
+        for _g in _ph_active[u"greetings"]:
+            _old_gr[_g] = True
         _ph_active = {
-            u"keep": list(_data[u"keep"]), u"block": list(_data[u"block"]),
-            u"replace": dict(_data[u"replace"]),
-            u"events": list(_data[u"events"]),
-            u"greetings": list(_data[u"greetings"]),
-            u"words": list(_data[u"words"]),
+            u"keep": [_v for _v in (_data.get(u"keep") or [])],
+            u"block": [_v for _v in (_data.get(u"block") or [])],
+            u"replace": {_k: _v for _k, _v in (_data.get(u"replace") or {}).items()},
+            u"events": [_v for _v in (_data.get(u"events") or [])],
+            u"greetings": [_v for _v in (_data.get(u"greetings") or [])],
+            u"words": [_v for _v in (_data.get(u"words") or [])],
         }
-        # never let a bad remote file empty these out
         if not _ph_active[u"keep"]:
-            _ph_active[u"keep"] = list(_ph_keep)
+            _ph_active[u"keep"] = [_v for _v in _ph_keep]
         if not _ph_active[u"block"]:
-            _ph_active[u"block"] = list(_ph_block)
+            _ph_active[u"block"] = [_v for _v in _ph_block]
         if not _ph_active[u"words"]:
-            _ph_active[u"words"] = list(_ph_words)
+            _ph_active[u"words"] = [_v for _v in _ph_words]
         _ph_list_version = str(_version)
         for _lbl in _ph_active[u"events"]:
             if _lbl not in _old_ev:
@@ -150,7 +145,6 @@ init 15 python:
         return False
 
     def _ph_purge_reactions():
-        # no reaction for banned outfits = no reveal dialogue on gifts
         import store
         try:
             _mfr = store.mas_filereacts
@@ -223,8 +217,7 @@ init 15 python:
                 store.persistent._mas_force_clothes = False
         except Exception:
             pass
-        # the holiday clothes map stores outfit ids and MAS looks them up
-        # directly, so swap purged ones out or the event clothes topic breaks
+        # MAS looks these ids up directly, so a purged one needs a replacement.
         try:
             _emap = store.persistent._mas_event_clothes_map
             if _emap:
@@ -251,8 +244,6 @@ init 15 python:
         except Exception:
             pass
 
-    # if the online updater already has newer lists cached, use those
-    # instead of the ones shipped in this file (see PureHeart_lists.rpy)
     try:
         import store
         _builtin = store._ph_try_builtin()
@@ -268,12 +259,9 @@ init 15 python:
     for _lbl in _ph_active[u"greetings"]:
         _ph_lock_ev(_lbl, 'GRE')
 
-    # MAS re-applies the saved outfit after startup, so run the purge
-    # once more on the first interaction just in case
     _ph_checked_once = [False]
 
     def _ph_first_interact():
-        # apply freshly downloaded lists whenever they arrive
         try:
             import store
             if getattr(store, "PH_pending_lists", None) is not None:
